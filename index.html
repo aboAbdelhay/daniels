@@ -196,7 +196,7 @@
           <h2>Services.</h2>
         </div>
         <div class="container">
-          <div class="row g-5 my-5">
+          <div class="row gy-5 gx-md-5 my-5">
             <div class="col-md-4">
               <div class="box rounded-2 text-center shadow py-5">
                 <div class="icon mt-3"><i class="fa-solid fa-laptop"></i></div>
@@ -343,7 +343,7 @@
             tabindex="0"
           >
             <div class="container">
-              <div class="row g-4">
+              <div class="row gy-4 gx-md-4">
                 <div class="col-md-4">
                   <figure>
                     <img src="image/portfolio/1.jpg" alt="" />
@@ -463,7 +463,7 @@
               tabindex="0"
             >
               <div class="container">
-                <div class="row g-4">
+                <div class="row gy-4 gx-md-4">
                   <div class="col-md-4">
                     <figure>
                       <img src="image/portfolio/4.jpg" alt="" />
@@ -618,7 +618,6 @@
               </div>
             </div>
           </div>
-        </div>
       </section>
       <!-- *end  works-->
       <!-- ?start clients -->
@@ -686,28 +685,28 @@
             <div class="col-md-3">
               <div class="item text-center">
                 <i class="fa-solid fa-users"></i>
-                <h3 class="my-3" id="counters">850</h3>
+                <h3 class="my-3" data-goal="850" id="counters">0</h3>
                 <p>Happy Customers</p>
               </div>
             </div>
             <div class="col-md-3">
               <div class="item text-center">
                 <i class="fa-solid fa-thumbs-up"></i>
-                <h3 class="my-3">230</h3>
+                <h3 class="my-3" data-goal="230">0</h3>
                 <p>Complete Projects</p>
               </div>
             </div>
             <div class="col-md-3">
               <div class="item text-center">
                 <i class="fa-solid fa-bullhorn"></i>
-                <h3 class="my-3">9450</h3>
+                <h3 class="my-3" data-goal="9450">0</h3>
                 <p>Lines Of Code</p>
               </div>
             </div>
             <div class="col-md-3">
               <div class="item text-center">
                 <i class="fa-solid fa-cloud-arrow-down"></i>
-                <h3 class="my-3">780</h3>
+                <h3 class="my-3" data-goal="780">0</h3>
                 <p>Files Downloaded</p>
               </div>
             </div>
@@ -887,7 +886,6 @@
               </div>
             </div>
            </div>
-          </div>
           <form>
             <div class="row justify-content-center">
               <div class="col-md-9">
@@ -907,6 +905,7 @@
               </div>
 
           </form>
+          </div>
         </div>
       </section>
       <!-- *end  contact-->
@@ -920,99 +919,6 @@
     <!-- ?end  footer-->
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
-    <script>
-      // -------------------
-      // animation to change the words in home
-      // -------------------
-      var typed = new Typed("#element", {
-        strings: [
-          " Developer^1000 ",
-          " Designer^1000 ",
-          " Larry Daniels^1000 ",
-        ],
-        typeSpeed: 30,
-        backSpeed: 30,
-        loop: true,
-      });
-      //  --------------------
-      // make btn in bottom when clink scroll to top navbar
-      const up = document.getElementById("up");
-
-      window.addEventListener("scroll", () => {
-        if (
-          document.body.scrollTop > 100 ||
-          document.documentElement.scrollTop > 100
-        ) {
-          up.classList.remove("hidden");
-        } else {
-          up.classList.add("hidden");
-        }
-      });
-      // Scroll to top when button is clicked
-      up.addEventListener("click", () => {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      });
-
-      // -----------------------
-      // code when to scroll add class active
-      // --------------------------
-      window.addEventListener("scroll", function () {
-        var sections = document.querySelectorAll(".nvscroll");
-        var navbarLinks = document.querySelectorAll("#navbar .navbar-nav .nav-link ");
-
-        sections.forEach(function (section, index) {
-          var sectionTop = section.offsetTop;
-          var sectionHeight = section.clientHeight;
-          if (window.scrollY >= sectionTop - sectionHeight / 3) {
-            navbarLinks.forEach(function (navbarLink) {
-              navbarLink.classList.remove("active");
-            });
-            navbarLinks[index].classList.add("active");
-          }
-        });
-      });
-      // ------------------
-      // when click in li ul be display none
-      //---------------
-      document.addEventListener("DOMContentLoaded", function () {
-        var navbarLinks = document.querySelectorAll("#navbar .navbar-nav .nav-link ");
-        const ul = document.querySelector("#navbarSupportedContent");
-        const close = document.querySelector(".close");
-
-        ul.querySelectorAll("#navbar .navbar-nav .nav-link").forEach((link) => {
-          link.addEventListener("click", function () {
-            ul.classList.remove("show");
-            console.log("dddddddd");
-          });
-        });
-      });
-    
-    
-    // ////////////////////
-    // navbar hidden when scroll and show when go to 2 section 
-    // ////////////////////
-    window.addEventListener('scroll', function() {
-  var navbar = document.getElementById('navbar');
-  if(window.scrollY < 10 ){
-    navbar.classList.remove('hid');
-    navbar.classList.remove('scrolledBlack');
-
-  }
-  else if (window.scrollY < 700 && window.scrollY > 10 ) {
-    navbar.classList.add('hid');
-
-  } else if(window.scrollY >= 700) {
-    navbar.classList.remove('hid');
-    navbar.classList.add('scrolledBlack');
-  }
-  else{
-    navbar.classList.remove('scrolledBlack');
-
-  }
-  
-});
-
-    </script>
+    <script src="js/style.js"></script>
   </body>
 </html>
